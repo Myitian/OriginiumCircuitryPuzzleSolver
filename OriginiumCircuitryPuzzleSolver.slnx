@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="OriginiumCircuitryPuzzleSolver.Test/OriginiumCircuitryPuzzleSolver.Test.csproj" />
+  <Project Path="OriginiumCircuitryPuzzleSolver.Example/OriginiumCircuitryPuzzleSolver.Example.csproj" />
   <Project Path="OriginiumCircuitryPuzzleSolver/OriginiumCircuitryPuzzleSolver.csproj" />
 </Solution>
