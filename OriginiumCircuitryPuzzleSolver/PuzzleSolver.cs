@@ -66,7 +66,7 @@ public static class PuzzleSolver
         }
         else
         {
-            //Console.WriteLine($"Depth: {depth}");
+            // Console.WriteLine($"Depth: {depth}");
             ref Context ctx = ref stack[--depth];
             if (ctx.ComponentBoundingBox.Width == 0 || ctx.ComponentBoundingBox.Height == 0)
                 return Place(baseGrid, depth, stack, colRequirements, rowRequirements);
@@ -83,13 +83,13 @@ public static class PuzzleSolver
                         baseGrid.Data.CopyTo(ctx.WorkingGrid.Data);
                         if (!ctx.Component.AddTo(ctx.WorkingGrid, offsetX, offsetY))
                         {
-                            //Console.WriteLine($"Failed to add at ({offsetX}, {offsetY})");
+                            // Console.WriteLine($"Failed to add at ({offsetX}, {offsetY})");
                             continue;
                         }
-                        //Console.WriteLine($"""
-                        //    at ({offsetX}, {offsetY}) with rotation {ctx.PositionWithRotation.Rotation}:
-                        //    {ctx.WorkingGrid}
-                        //    """);
+                        // Console.WriteLine($"""
+                        //     at ({offsetX}, {offsetY}) with rotation {ctx.PositionWithRotation.Rotation}:
+                        //     {ctx.WorkingGrid}
+                        //     """);
                         if (Place(ctx.WorkingGrid, depth, stack, colRequirements, rowRequirements))
                         {
                             ctx.PositionWithRotation.X = offsetX - offsetXStart;
